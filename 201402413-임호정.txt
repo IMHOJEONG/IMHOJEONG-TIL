@@ -1,0 +1,16 @@
+show databases;
+use employees;
+show tables;
+select count(*) from employees;
+select * from employees limit 10;
+show create table department;
+select * from employees join dept_emp on employees.emp_no = dept_emp.emp_no;
+select * from employees join dept_emp on employees.emp_no = dept_emp.emp_no join departments on dept_emp.dept_no = departments.dept_no where employees.emp_no = 10001\G;
+select avg(salaries.salary) from employees join dept_emp on employees.emp_no = dept_emp.emp_no join departments on dept_emp.dept_no = departments.dept_no join salaries on employees.emp_no = salaries.emp_no where departments.dept_name = 'Development';
+desc dept_emp;
+create index sample_index on employees(first_name,last_name);
+select * from employees where first_name like 'Geo%';
+select * from employees where first_name like 'geo___';
+commit;
+select * from departments;
+rollback;
