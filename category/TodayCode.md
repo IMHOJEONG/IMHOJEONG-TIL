@@ -1,5 +1,5 @@
 ---
 layout: category
-title: TodayCode
-category : TodayCode
+title: Category
+category : TodayCode, TIL, JeKyll
 ---
